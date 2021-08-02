@@ -1,157 +1,125 @@
-<html>
-<head>
-<meta charset="utf-8">
-<meta content="IE-edge" http-equiv="X-UA-Compatible">
-<meta content="width=device-width, intial-scale=1.0" name="viewport">
-<title>Portfolio</title>
-	<!--style----->
-	<style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      body{
-      margin:0px;
-      padding: 0px;
-      font-family: poppins;
-      background-color: #111111;
-  }
-  *{
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-  }
-  ul{
-      list-style: none;
-  }
-  a{
-      text-decoration: none;
-  }
-  .navigation{
-      position: fixed;
-      left: 0px;
-      top: 0px;
-      width:100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      z-index: 4;
-      background-image: linear-gradient(180deg, rgb(17,17,17) 15%, transparent);
-  }
-  .menu{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0px;
-  }
-  .menu li{
-      padding: 20px;
-  }
-  .logo{
-      height:33px;
-      z-index: 3;
-  }
-  .logo img{
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-  }
-  .menu li a{
-      color: #ffffffcc;
-  }
+<style media="screen">
 
-  .menu li a:hover{
-      color: #46a0f5;
-      transition: all ease 0.5s;
-  }
+  body{
+  margin:0px;
+  padding: 0px;
+  font-family: poppins;
+  background-color: #111111;
+}
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.navigation{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 4;
+  background-image: linear-gradient(180deg, rgb(17,17,17) 15%, transparent);
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+.menu li{
+  padding: 20px;
+}
+.logo{
+  height:33px;
+  z-index: 3;
+}
+.logo img{
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.menu li a{
+  color: #ffffffcc;
+}
 
-  /*--main------------------------*/
-  #main{
-      width:100%;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-  }
-  #main::before{
-      content: '';
-      position: absolute;
-      width:130%;
-      height: 100vh;
-      left: -20%;
-      top: -23%;
-      transform: rotate(-10deg);
-      background: linear-gradient(45deg, rgb(19,19,19) -10%, #141516);
-      z-index: -1;
-  }
-  .main-text{
-      position: absolute;
-      left: 15%;
-      top: 50%;
-      transform: translate(-15%,-50%);
-      width:500px;
-  }
-  .main-text h1{
-      color: #ffffff;
-      font-size: 2.5rem;
-      font-weight: 600;
-      text-shadow: 2px 2px 30px rgba(0,0,0,0.01);
-      margin: 0px;
-      line-height: 45px;
-  }
-  .main-text p{
-      color: #8a94a7c0;
-      font-size: 1rem;
-      margin: 0px;
-      margin-top: 10px;
-  }
-  .main-btns{
-      display: flex;
-      align-items: center;
-      margin-top: 25px;
-  }
-  .main-btns a{
-      width:180px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-transform: uppercase;
-      color: #ffffff;
-      box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-  }
-  .download-cv-btn{
-      background: linear-gradient(90deg, #2788e2 20%, #3b58b8);
-      margin-right: 20px;
-  }
-  .model{
-      width:500px;
-      height: 500px;
-      position: absolute;
-      top: 50%;
-      right: 7%;
-      transform: translate(-7%,-50%);
-  }
-  .model img{
-      width:100%;
-      height: 100%;
-      object-fit: contain;
-  }
-  .model-bg{
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      width:45%;
-      height: 100%;
-  }
-  .model-bg img{
-      width:100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: top;
-  }
+.menu li a:hover{
+  color: #46a0f5;
+  transition: all ease 0.5s;
+}
 
-  /*Skills---------------------*/
+/*--main------------------------*/
+#main{
+  width:100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#main::before{
+  content: '';
+  position: absolute;
+  width:130%;
+  height: 100vh;
+  left: -20%;
+  top: -23%;
+  transform: rotate(-10deg);
+  background: linear-gradient(45deg, rgb(19,19,19) -10%, #141516);
+  z-index: -1;
+}
+.main-text{
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translate(-15%,-50%);
+  width:500px;
+}
+.main-text h1{
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 30px rgba(0,0,0,0.01);
+  margin: 0px;
+  line-height: 45px;
+}
+.main-text p{
+  color: #8a94a7c0;
+  font-size: 1rem;
+  margin: 0px;
+  margin-top: 10px;
+}
+.main-btns{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.main-btns a{
+  width:180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+.download-cv-btn{
+  background: linear-gradient(90deg, #2788e2 20%, #3b58b8);
+  margin-right: 20px;
+}
+
+/* Skills------------- */
 #skills{
     width:90%;
     display: flex;
@@ -239,6 +207,9 @@
 .progress-line.js span{
     width:80%;
 }
+.progress-line.bootstrap span{
+  width:85%;
+}
 .progress-line span::before{
     position: absolute;
     content: '';
@@ -271,6 +242,9 @@
 .progress-line.js span::after{
     content:'80%';
 }
+.progress-line.bootstrap span::after{
+  content:'85%';
+}
 .skill-img{
     width:600px;
     height: 600px;
@@ -279,49 +253,14 @@
     width:100%;
     height: 100%;
     object-fit: contain;
-
-    /*Introduction------------------*/
-/* #introduction{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 3;
-    position: relative;
-    text-align: center;
-    max-width: 80%;
-    border-top: 1px solid #292b32;
-    padding: 5px 0px;
-    border-bottom: 1px solid #292b32;
-    margin: 5px auto;
-    background-image: url(../images/bg.png);
-    background-size: 950px;
-    background-repeat: no-repeat;
-    background-position: center;
+  }
+  /* Flex */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin:50px;
+  padding: 35px;
 }
-.intro-heading{
-    width:60%;
-}
-.intro-heading strong{
-    color: #ffffff;
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-.intro-heading p{
-    color: #8a94a763;
-}
-.intro-video{
-    margin-top: 50px;
-}
-.intro-video iframe{
-    width:712px;
-    height: 400px;
-}
-
-
-}  */
-
-
 
 #get-in-touch{
     width:90%;
@@ -386,553 +325,214 @@
     color: #ffffff;
     text-transform: uppercase;
 }
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #14151610;
-    padding: 10px;
-    margin-top: 50px;
-    border-top: 1px solid #272729;
-}
-.copyright{
-    color:#ffffff;
-}
-.footer-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer-social a{
-    width:35px;
-    height: 35px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #ffffff;
-    background-color: #292b3252;
-    margin: 5px;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-.footer-social a:hover{
-    background-color: #2993f7;
-    transition: all ease 0.5s;
-}
-::selection{
-    color: #e4e4e4;
-    background-color: #416cdf;
-}
-#services,
-#introduction,
-#skills{
-    padding-top: 60px;
-}
-#introduction{
-    padding-bottom: 40px;
-}
 
-.menu-icon,
-.menu-btn{
-    display: none;
-}
-@media(max-width:1200px){
-    .model-bg{
-        display: none;
-    }
-    .model{
-        width:400px;
-        height: 400px;
-        right: 5%;
-        transform: translate(-5%,-50%);
-    }
-    .main-text{
-        left: 10%;
-        transform: translate(-10%,-50%);
-    }
-}
-@media(max-width:1000px){
-    .navigation{
-        justify-content: space-between;
-        height: 65px;
-        padding:35px 25px;
-    }
-    .navigation .menu{
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0px;
-        background-color: #111111;
-        border-bottom: 4px solid #1b1b1b;
-        width:100%;
-        padding:0px;
-        margin: 0px;
-    }
-    .navigation .menu li{
-        width:100%;
-        margin: 0px;
-        padding: 0px;
-    }
-    .navigation .menu li a{
-        width:100%;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        margin: 0px;
-        padding: 30px 20px;
-        border: 1px solid rgba(38,38,38,0.03);
-    }
-    .navigation .menu li a:hover{
-        color: #ffffff;
-        background-color: #2065cc;
-    }
-    .menu-icon{
-        display: block;
-    }
-    nav .menu-icon{
-        cursor: pointer;
-        float: right;
-        padding: 5px;
-        position: relative;
-        user-select: none;
-        z-index: 2;
-    }
-    nav .menu-icon .nav-icon{
-        background-color: #ffffffcc;
-        display: block;
-        position: relative;
-        height: 2px;
-        transition: background 0.2s ease-out;
-        width:25px;
-    }
-    nav .menu-icon .nav-icon:before,
-    nav .menu-icon .nav-icon:after{
-        background-color: #ffffffcc;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all ease-out 0.2s;
-        width:100%;
-    }
-    nav .menu-icon .nav-icon:before{
-        top: 5px;
-    }
-    nav .menu-icon .nav-icon:after{
-        top: -5px;
-    }
-    nav .menu-icon .nav-icon,
-    nav .menu-icon:checked ~ .menu-icon .nav-icon{
-        background-color: transparent;
-    }
-    nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
-        transform: rotate(-45deg);
-        top: 0px;
-    }
-    nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
-        transform: rotate(45deg);
-        top: 0px;
-    }
-    nav .menu-btn:checked ~ .menu{
-        display: block;
-    }
-    .menu::before{
-        position: absolute;
-        left: 0px;
-        top: -60px;
-        content: '';
-        width:100%;
-        height: 60px;
-        background-color: #111111;
-    }
-    .model{
-        display: none;
-    }
-    .main-text{
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    #skills{
-        width:100%;
-        justify-content: space-between;
-        padding-left: 40px;
-    }
-    .skills-text-section{
-        width:400px;
-    }
-    .skill-img{
-        width:40%;
-        height: 300px;
-    }
-    .skill-img img{
-        object-fit: cover;
-        object-position: left;
-    }
+</style>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#main">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#project">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#get-in-touch">Get in Touch</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<section id="main">
+    <!--text-------------->
+    <div class="main-text">
+        <h1>Hey, I'm Ganesh Deulkar,</h1>
+        <p>I'm currently a student of First Year of Computer Science Degree persuing my Bachelor's Degree. I'm an enthusiast in Data Science and all Web Platforms.</p>
+        <!--btns---------->
+        <div class="main-btns">
+            <a href="#" class="download-cv-btn">Download CV</a>
 
-}
-@media(max-width:900px){
-    .intro-video iframe{
-        width:700px;
-        height: 400px;
-    }
-    .services-box-container{
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-    }
-}
-@media(max-width:800px){
-    .intro-video{
-        width:100%;
-    }
-    .intro-video iframe{
-        width:100%;
-        height: 38vh;
-    }
-    .intro-heading{
-        width:80%;
-    }
-}
-@media(max-width:620px){
-    #contact form{
-        width:90%;
-    }
-    .main-text{
-        width:85%;
-    }
-    .skill-heading h2{
-        font-size: 2.2rem;
-    }
-    .intro-video iframe{
-        width:100%;
-        height: 200px;
-    }
-}
-@media(max-width:530px){
-    .skill-img{
-        display: none;
-    }
-    .skills-text-section{
-        width:85%;
-    }
-    .main-btns{
-        flex-direction: column;
-    }
-    .main-btns a{
-        width:100%;
-        margin: 5px 0px;
-    }
-    .intro-heading{
-        width:100%;
-    }
-    .intro-heading strong{
-        font-size: 2rem;
-    }
-    #get-in-touch{
-    width:90%;
-    height:100px;
-    background-color: #15181d;
-    display: flex;
-    margin: 60px auto;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url(../images/bg-2.png);
-    background-position: top right;
-    background-size: 400px;
-    background-repeat: no-repeat;
-}
-#get-in-touch span{
-    color: #e4e4e4;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-#get-in-touch a{
-    color: #ffffff;
-    width:160px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg,#2788e2 20%,#3b4eb8);
-}
-#contact{
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#contact form{
-    width:600px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#contact form input,
-#contact form textarea{
-    width:100%;
-    height:50px;
-    margin:5px 0px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background-color: #373a412d;
-    color: #ffffff;
-    border-radius: 5px;
-}
-#contact form textarea{
-    height: 150px;
-}
-#contact form input[type="submit"]{
-    height: 45px;
-    background: linear-gradient(90deg, #2065cc 20%,#3b58b8);
-    color: #ffffff;
-    text-transform: uppercase;
-}
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #14151610;
-    padding: 10px;
-    margin-top: 50px;
-    border-top: 1px solid #272729;
-}
-.copyright{
-    color:#ffffff;
-}
-.footer-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.footer-social a{
-    width:35px;
-    height: 35px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #ffffff;
-    background-color: #292b3252;
-    margin: 5px;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-.footer-social a:hover{
-    background-color: #2993f7;
-    transition: all ease 0.5s;
-}
-::selection{
-    color: #e4e4e4;
-    background-color: #416cdf;
-}
-#services,
-#introduction,
-#skills{
-    padding-top: 60px;
-}
-#introduction{
-    padding-bottom: 40px;
-}
+        </div>
+    </div>
+</section>
 
-    .copyright{
-        font-size: 0.8rem;
-    }
-    .intro-video iframe{
-        height: auto;
-    }
-}
-@media(max-width:300px){
-    .navigation{
-        padding: 30px 10px;
-    }
-}
-
-	</style>
-
-</head>
-<body>
-
-  <!--navigation-bar---------------------------->
-      <nav class="navigation">
-          <!--logo-->
-        <!--  <a href="#" class="logo">
-              <img src="images/logo.png"/>
-          </a> -->
-          <!--menu-btn----->
-          <input type="checkbox" class="menu-btn" id="menu-btn">
-          <label for="menu-btn" class="menu-icon">
-              <span class="nav-icon"></span>
-          </label>
-          <!--menu--->
-          <ul class="menu">
-              <li><a href="#main">Home</a></li>
-              <li><a href="#skills">Skills</a></li>
-            <!--  <li><a href="#introduction">Introduction</a></li>
-              <li><a href="#services">Services</a></li> -->
-              <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!--hire-me-btn----->
-        <!--  <a href="#" class="hire-me">
-              Hire Me
-            -->
-              <i class="fas fa-chevron-right"></i>
-          </a>
-      </nav>
-      <!--main-section---------------------->
-      <section id="main">
-          <!--text-------------->
-          <div class="main-text">
-              <h1>Hey, I'm Ganesh Deulkar,</h1>
-              <p>I'm currently a student of First Year of Computer Science Degree persuing my Bachelor's Degree. I'm an enthusiast in Data Science and all Web Platforms.</p>
-              <!--btns---------->
-              <div class="main-btns">
-                  <a href="#" class="download-cv-btn">Download CV</a>
-              <!--    <a href="#" class="hire-me-btn">Hire Me</a> -->
+<section id="skills">
+  <div class="skills-text-section">
+      <!--heading--------->
+      <div class="skill-heading" data-aos="fade" >
+          <span>My Skills</span>
+          <h2>My Experties</h2>
+      </div>
+      <!--skills-box-container--->
+      <div class="s-box-container">
+          <!--skill-box-->
+          <div class="skill-box" data-aos="fade-up" >
+              <!--box-icon---->
+              <div class="s-box-icon">
+                  <i class="fab fa-html5"></i>
+              </div>
+              <!--box-text---->
+              <div class="s-box-text">
+                  <strong>Hyper Text Markup Language(HTML)</strong>
+                  <p>I have 1 Year Experince in HTML and I Completed 20+ HTML Projects.</p>
+                  <!--progress-line---->
+                  <div class="progress-line html"><span></span></div>
               </div>
           </div>
-          <!--mode-bg------------>
-          <div class="model-bg">
-              <!---<img data-aos="fade" data-aos-duration="3000" src="images/model-bg.svg"/> -->
+          <!--skill-box-->
+          <div class="skill-box" data-aos="fade-up">
+              <!--box-icon---->
+              <div class="s-box-icon">
+                  <i class="fab fa-css3-alt"></i>
+              </div>
+              <!--box-text---->
+              <div class="s-box-text">
+                  <strong>Cascading Style Sheets(CSS)</strong>
+                  <p>I have 1 Year Experince in CSS and I Completed 20+ CSS Projects.</p>
+                  <!--progress-line---->
+                  <div class="progress-line css"><span></span></div>
+              </div>
           </div>
-          <!--model-------------->
-          <div class="model">
-            <!--  <img src="images/model.png"/>-->
+          <!--skill-box-->
+          <div class="skill-box" data-aos="fade-up">
+              <!--box-icon---->
+              <div class="s-box-icon">
+                  <i class="fab fa-js"></i>
+              </div>
+              <!--box-text---->
+              <div class="s-box-text">
+                  <strong>JavaScript(JS)</strong>
+                 <p>I have 6 months Experince in JavaScript and I Completed 10+ JavaScript Projects.</p> 
+                  <!--progress-line---->
+                  <div class="progress-line js"><span></span></div>
+              </div>
           </div>
-      </section>
+      </div>
+      <div class="skill-box" data-aos="fade-up">
+          <!--box-icon---->
+          <div class="s-box-icon">
+              <i class="fab fa-css3-alt"></i>
+          </div>
+          <!--box-text---->
+          <div class="s-box-text">
+              <strong>Bootstrap</strong>
+              <p>I have 1 Year Experince in Bootstrap and I Completed 20+ Projects.</p>
+              <!--progress-line---->
+              <div class="progress-line bootstrap"><span></span></div>
+          </div>
+      </div>
+  </div>
 
-      <!--skills---------------------------->
-   <section id="skills">
-		 <div class="projects">
-			 <div><a class="project-tile" href="https://codepen.io/ganeshdeulkar1196/pen/ZEebxGQ" target="_blank">Tribute Page Project</a></div>
-			 <div><a class="project-tile" href="https://codepen.io/ganeshdeulkar1196/pen/JjWGzXE" target="_blank">Survey Form Project</a></div>
-			 <div><a class="project-tile" href="https://codepen.io/ganeshdeulkar1196/pen/eYvzRyY" target="_blank">Product Landing Page Project</a></div>
-			 <div><a class="project-tile" href="https://codepen.io/ganeshdeulkar1196/pen/abJmogr" target="_blank">Technical Documentation Page Project</a></div>
-		 </div>
-       <!--skills-text-section---->
-       <div class="skills-text-section">
-           <!--heading--------->
-           <div class="skill-heading" data-aos="fade" >
-               <span>My Skills</span>
-               <h2>My Experties</h2>
-           </div>
-           <!--skills-box-container--->
-           <div class="s-box-container">
-               <!--skill-box-->
-               <div class="skill-box" data-aos="fade-up" >
-                   <!--box-icon---->
-                   <div class="s-box-icon">
-                       <i class="fab fa-html5"></i>
-                   </div>
-                   <!--box-text---->
-                   <div class="s-box-text">
-                       <strong>Hyper Text Markup Language(HTML)</strong>
-                       <p>I have 1 Year Experince in HTML and I Completed 20+ HTML Projects.</p>
-                       <!--progress-line---->
-                       <div class="progress-line html"><span></span></div>
-                   </div>
-               </div>
-               <!--skill-box-->
-               <div class="skill-box" data-aos="fade-up">
-                   <!--box-icon---->
-                   <div class="s-box-icon">
-                       <i class="fab fa-css3-alt"></i>
-                   </div>
-                   <!--box-text---->
-                   <div class="s-box-text">
-                       <strong>Cascading Style Sheets(CSS)</strong>
-                       <p>I have 1 Year Experince in CSS and I Completed 20+ CSS Projects.</p>
-                       <!--progress-line---->
-                       <div class="progress-line css"><span></span></div>
-                   </div>
-               </div>
-               <!--skill-box-->
-               <div class="skill-box" data-aos="fade-up">
-                   <!--box-icon---->
-                   <div class="s-box-icon">
-                       <i class="fab fa-js"></i>
-                   </div>
-                   <!--box-text---->
-                   <div class="s-box-text">
-                       <strong>JavaScript(JS)</strong>
-                      <!-- <p>I have 3 Year Experince in JavaScript and I Completed 100+ JavaScript Projects.</p> -->
-                       <!--progress-line---->
-                       <div class="progress-line js"><span></span></div>
-                   </div>
-               </div>
-           </div>
-       </div>
-       <!--skill-img-section---------->
-                   <div class="skill-img" >
-          <!-- <img data-aos="fade" src="images/skill2.png"/>-->
+  <!--skill-img-section---------->
+              <div class="skill-img" >
+     <!-- <img data-aos="fade" src="images/skill2.png"/>-->
 
-       </div>
-   </section>
+  </div>
+</section>
 
-   <!--introduction-------------------------------->
-                   <section id="introduction">
-       <!--heading---->
-       <div class="intro-heading" data-aos="fade">
-           <strong>Self Introduction</strong>
-          <!-- <p></p>-->
-       </div>
-       <!--place-your-self-introduction-video-here-->
-                <div class="intro-video" data-aos="fade-up">
+<section id="project">
+  <div class="project">
+    <strong>My Projects</strong>
+    <div class="card">
+    <div class="card-header">
+      A Tributary Page
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">A Tributary Page of Dr. A P J Abdul Kalaam</h5>
+      <p class="card-text">A tribute to Dr.A P J Abdul Kalaam's Work</p>
+      <a href="https://codepen.io/ganeshdeulkar1196/pen/ZEebxGQ" target="_blank" class="btn btn-primary">Have a Look...!</a>
+    </div>
+  </div>
 
-       </div>
+  <div class="card">
+  <div class="card-header">
+    A Survey form for an Institute
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Survey Form</h5>
+    <p class="card-text">A Demo-Survey-Form for an Institution</p>
+    <a href="https://codepen.io/ganeshdeulkar1196/pen/JjWGzXE" target="_blank" class="btn btn-primary">Go...</a>
+  </div>
+</div>
 
-   </section>
+<div class="card">
+  <div class="card-header">
+    Product Landing Page
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">PLP</h5>
+    <p class="card-text">A Demo Product Landing Page that can be made for a startup or client</p>
+    <a href="https://codepen.io/ganeshdeulkar1196/pen/eYvzRyY" target="_blank" class="btn btn-primary">Verify</a>
+  </div>
+</div>
 
+<div class="card">
+  <div class="card-header">
+    Technical Documentation Page
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Documentation Page</h5>
+    <p class="card-text">Technical Documentation Page on Difference between Java And JavaScript</p>
+    <a href="https://codepen.io/ganeshdeulkar1196/pen/abJmogr" target="_blank" class="btn btn-primary">Visit</a>
+  </div>
+</div>
 
+  </div>
+</section>
 
-   <!--get-in-touch------------------>
-   <section id="get-in-touch" data-aos="fade-up">
-       <span>Here Are My Contact Details</span>
-       <a href="https://www.instagram.com/aadideulkar12/">Get In Touch</a>
-   </section>
-   <!--contact--------------->
-   <section id="contact">
-       <!--form----------->
-       <form data-aos="fade-up">
-           <!--full-name---->
-           <input type="text" name="fullname" placeholder="Full Name" required>
-           <!--email-------->
-           <input type="email" name="email" placeholder="Example@gmail.com" required>
-           <!--write-something-->
-           <textarea name="message" placeholder="Write Something...." required></textarea>
-           <!--send-btn---->
-           <input type="submit" value="Send">
-       </form>
-   </section>
-   <!--footer------------------->
-   <footer>
-       <!--copyright-->
-       <span class="copyright">Thanks for visiting...</span>
-       <!--footer-social-links---->
-       <div class="footer-social">
-           <!--facebook-->
-           <a href="#">
-               <i class="fab fa-facebook-f"></i>
-           </a>
-           <!--twitter-->
-           <a href="#">
-               <i class="fab fa-twitter"></i>
-           </a>
-           <!--youtube-->
-           <a href="#">
-               <i class="fab fa-youtube"></i>
-           </a>
-       </div>
-   </footer>
+<section id="get-in-touch">
+<!--get-in-touch------------------>
+    <section id="get-in-touch" data-aos="fade-up">
+
+        <a href="https://www.instagram.com/aadideulkar12/">Get In Touch</a>
+    </section>
+    <!--contact--------------->
+    <section id="contact">
+        <!--form----------->
+        <form data-aos="fade-up">
+            <!--full-name---->
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <!--email-------->
+            <input type="email" name="email" placeholder="Example@gmail.com" required>
+            <!--write-something-->
+            <textarea name="message" placeholder="Write Something...." required></textarea>
+            <!--send-btn---->
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    <!--footer------------------->
+    <footer>
+        <!--copyright-->
+
+        <!--footer-social-links---->
+        <div class="footer-social">
+            <!--facebook-->
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <!--twitter-->
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <!--youtube-->
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
 
 
-
-
-
-</body>
-</html>
+</section>
